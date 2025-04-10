@@ -4,10 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Luxury Lane 95</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="icon" href="Assets/luxury lane 95 logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   
@@ -182,6 +181,24 @@
       current = (current + 1) % slides.length;
       slides[current].classList.add('active');
     }, 3000);
+
+    const prevButton = document.querySelector('.prev-button');
+    const nextButton = document.querySelector('.next-button');
+    const newArrivals = document.querySelector('.new-arrivals');
+
+    prevButton.addEventListener('click', () => {
+      newArrivals.scrollBy({
+        left: -400, // Adjust this value based on the width of your car model container
+        behavior: 'smooth'
+      });
+    });
+
+    nextButton.addEventListener('click', () => {
+      newArrivals.scrollBy({
+        left: 400, // Adjust this value based on the width of your car model container
+        behavior: 'smooth'
+      });
+    });
   </script>
 </body>
 </html>
