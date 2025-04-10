@@ -54,6 +54,42 @@
           </div>
         </div>
       </div>
+      <h2 class="new-arrivals-text">New Arrivals</h2>
+      <div class="new-arrivals-carousel">
+        <button class="carousel-button prev-button">&#10094;</button>
+        <div class="new-arrivals">
+          <div class="car-model-container">
+            <a href="#"><img src="Assets/bmwi7 new arrivals.jpg" alt="BMW i7 New Arrival"></a>
+            <div class="car-model-text">
+              <h3>BMW i7</h3>
+              <p>Luxury Redefined</p>
+            </div>
+          </div>
+          <div class="car-model-container">
+            <a href="#"><img src="Assets/bmw i5 new arrivals.jpg" alt="BMW i5 New Arrival"></a>
+            <div class="car-model-text">
+              <h3>BMW i5</h3>
+              <p>Innovation Meets Elegance</p>
+            </div>
+          </div>
+          <div class="car-model-container">
+            <a href="#"><img src="Assets/g wagon new arrivals.webp" alt="G Wagon New Arrival"></a>
+            <div class="car-model-text">
+              <h3>G Wagon</h3>
+              <p>Rugged Luxury</p>
+            </div>
+          </div>
+          <div class="car-model-container">
+            <a href="#"><img src="Assets/Mercedes Benz S-Class new arrivals4.jpg" alt="Mercedes Benz S-Class New Arrival"></a>
+            <div class="car-model-text">
+              <h3>Mercedes Benz S-Class</h3>
+              <p>Excellence in Motion</p>
+            </div>
+          </div>
+          
+        </div>
+        <button class="carousel-button next-button">&#10095;</button>
+      </div>
     </main>
   </div>
 
@@ -65,6 +101,24 @@
       current = (current + 1) % slides.length;
       slides[current].classList.add('active');
     }, 3000);
+
+    const prevButton = document.querySelector('.prev-button');
+    const nextButton = document.querySelector('.next-button');
+    const newArrivals = document.querySelector('.new-arrivals');
+
+    prevButton.addEventListener('click', () => {
+      newArrivals.scrollBy({
+        left: -400, // Adjust this value based on the width of your car model container
+        behavior: 'smooth'
+      });
+    });
+
+    nextButton.addEventListener('click', () => {
+      newArrivals.scrollBy({
+        left: 400, // Adjust this value based on the width of your car model container
+        behavior: 'smooth'
+      });
+    });
   </script>
 </body>
 </html>
