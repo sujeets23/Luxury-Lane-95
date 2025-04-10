@@ -7,6 +7,23 @@ body {
   overflow-x: hidden;
 }
 
+.page-wrapper {
+  transform: scale(0.9);
+  opacity: 0;
+  animation: zoomReveal 1s ease-in-out forwards;
+}
+
+@keyframes zoomReveal {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .navbar {
   position: absolute;
   top: 40px;
@@ -136,7 +153,6 @@ h1 {
   bottom: 80px;
   left: 80px;
   color: #fff;
-  
 }
 
 .slider-text h2 {
@@ -147,4 +163,23 @@ h1 {
 .slider-text p {
   font-size: 20px;
   margin: 10px 0 0;
+}
+
+.book-btn {
+  margin-top: 20px;
+  display: inline-block;
+  padding: 10px 24px;
+  background: #d0d3d3;
+  color: #000;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.book-btn:hover {
+  background: #ffffff;
+  color: #000;
+  transform: scale(1.05);
 }

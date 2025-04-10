@@ -9,48 +9,53 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <a href="index.html"><img src="Assets/luxury lane 95 logo.png" alt="Luxury Lane 95 Logo"></a>
-      </div>
-      <h1>Drive Dreams Live Luxury</h1>
-      <ul class="nav-links">
-        <li><a href="#"><img src="Assets/vecteezy_bmw-transparent-png-bmw-free-png_19956127.png" alt="BMW"> BMW</a></li>
-        <li><a href="#"><img src="Assets/porsche logo.png" alt="Porsche"> Porsche</a></li>
-        <li><a href="#"><img src="Assets/koenigsegg logo.png" alt="Koenigsegg"> Koenigsegg</a></li>
-        <li><a href="#"><i class="fa-solid fa-screwdriver-wrench"></i> Customise Your Car</a></li>
-        <li><a href="#"><i class="fa-regular fa-user"></i> My Account</a></li>
-        <li class="menu-icon"><i class="fa-solid fa-bars"></i></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="page-wrapper">
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img src="Assets/luxury lane 95 logo.png" alt="Luxury Lane 95 Logo">
+        </div>
+        <h1>Drive Dreams Live Luxury</h1>
+        <ul class="nav-links">
+          <li><a href="#"><img src="Assets/vecteezy_bmw-transparent-png-bmw-free-png_19956127.png" alt="BMW"> BMW</a></li>
+          <li><a href="#"><img src="Assets/porsche logo.png" alt="Porsche"> Porsche</a></li>
+          <li><a href="#"><img src="Assets/koenigsegg logo.png" alt="Koenigsegg"> Koenigsegg</a></li>
+          <li><a href="#"><i class="fa-solid fa-screwdriver-wrench"></i> Customise Your Car</a></li>
+          <li><a href="#"><i class="fa-regular fa-user"></i> My Account</a></li>
+          <li class="menu-icon"><i class="fa-solid fa-bars"></i></li>
+        </ul>
+      </nav>
+    </header>
 
-  <main>
-    <div class="car-slider">
-      <div class="slide active">
-        <img src="Assets/bmw m5 slider.png" alt="BMW M5 Slider">
-        <div class="slider-text">
-          <h2>BMW M5</h2>
-          <p>Power. Prestige. Perfection</p>
+    <main>
+      <div class="car-slider">
+        <div class="slide active">
+          <img src="Assets/bmw m5 slider.png" alt="BMW M5 Slider">
+          <div class="slider-text">
+            <h2>BMW M5</h2>
+            <p>Power. Prestige. Perfection.</p>
+            <a href="#" class="book-btn">Book Now</a>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="Assets/prsche 911 slider.jpg" alt="Porsche 911 Slider">
+          <div class="slider-text">
+            <h2>Porsche 911</h2>
+            <p>Born to thrill, built to last.</p>
+            <a href="#" class="book-btn">Book Now</a>
+          </div>
+        </div>
+        <div class="slide">
+          <img src="Assets/wp14965109-koenigsegg-agera-r-blue-wallpapers.webp" alt="Koenigsegg Regera">
+          <div class="slider-text">
+            <h2>Koenigsegg Regera</h2>
+            <p>Hybrid Hypercar. Pure Swedish power.</p>
+            <a href="#" class="book-btn">Book Now</a>
+          </div>
         </div>
       </div>
-      <div class="slide">
-        <img src="Assets/prsche 911 slider.jpg" alt="Porsche 911 Slider">
-        <div class="slider-text">
-          <h2>Porsche 911</h2>
-          <p>Born to thrill, built to last</p>
-        </div>
-      </div>
-      <div class="slide">
-        <img src="Assets/wp14965109-koenigsegg-agera-r-blue-wallpapers.webp" alt="Koenigsegg Slider">
-        <div class="slider-text">
-          <h2>Koenigsegg Agera</h2>
-          <p>Redefining the Hypercar Standard</p>
-        </div>
-      </div>
-    </div>
-  </main>
+    </main>
+  </div>
 
   <script>
     const slides = document.querySelectorAll('.slide');
