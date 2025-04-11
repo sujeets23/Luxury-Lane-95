@@ -1,0 +1,28 @@
+h2{
+    margin-top: 1200px;
+}
+
+.bmwi7{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.bmwi7bgimg {
+    width: 100%;
+    height: 100vh; 
+    object-fit: cover; 
+    object-position: center; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+
+.bmwi7bgimg img {
+    width: 100%; 
+    height: auto; 
+    max-height: 100%; 
+}

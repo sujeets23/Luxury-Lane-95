@@ -22,7 +22,7 @@ body::before {
 }
 
 .navbar {
-  position: absolute;
+  position: fixed;
   top: 40px;
   left: 50%;
   transform: translateX(-50%);
@@ -240,32 +240,76 @@ h1 {
 }
 
 .site-footer {
-
+  background-color: #000000;
   color: #e3e3e3;
-  text-align: center;
-  padding: 20px 0;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  padding: 40px 0;
+  text-align: left;
 }
 
 .footer-content {
+  display: flex;
+  justify-content: space-around;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-.footer-content p {
-  margin: 5px 0;
+.footer-column {
+  flex: 1;
+  margin: 0 20px;
 }
 
-.footer-links a {
-  color: #05f7ff;
+.footer-column h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #e3e3e3ec;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: #e3e3e3ac;
   text-decoration: none;
-  margin: 0 10px;
   transition: color 0.3s ease;
 }
 
-.footer-links a:hover {
-  color: #fff;
+.footer-column ul li a:hover {
+  color: #e3e3e3;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #141414e7;
+  color: #676767;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.683);
+  color: #000;
+  backdrop-filter: blur(50px);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.popup.show {
+  opacity: 1;
 }
