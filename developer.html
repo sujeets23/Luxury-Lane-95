@@ -4,24 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Developer Team | Luxury Lane 95</title>
+    <link rel="icon" type="icon" href="assets/luxury lane 95 logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            background-color: #000; /* Black background */
-            color: #fff;
-        }
-
-        header {
-            background-color: #111;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
+            background-image: none;
         }
 
         .team-container {
@@ -30,10 +19,11 @@
             justify-content: center;
             padding: 40px 20px;
             gap: 30px;
+            margin-top: 120px;
         }
 
         .team-member {
-            background: #1a1a1a;
+            background: #121212;
             border-radius: 12px;
             box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
             overflow: hidden;
@@ -46,13 +36,15 @@
             width: 180px;
             height: 180px;
             object-fit: cover;
-            border-radius: 50%; /* Circular image */
+            border-radius: 50%;
             margin-top: 20px;
             transition: transform 0.3s ease;
         }
 
         .team-member:hover img {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.765);
         }
 
         .member-info {
@@ -74,12 +66,25 @@
 </head>
 <body>
     <header>
-        <h1>Meet Our Developers</h1>
+            <nav class="navbar">
+              <div class="logo">
+                <a href="index.html"><img src="Assets/luxury lane 95 logo.png" alt="Luxury Lane 95 Logo" /></a>
+              </div>
+              <h1>Drive Dreams Live Luxury</h1>
+              <ul class="nav-links">
+                <li><a href="#"><img src="Assets/vecteezy_bmw-transparent-png-bmw-free-png_19956127.png" alt="BMW" /> BMW</a></li>
+                <li><a href="#"><img src="Assets/porsche logo.png" alt="Porsche" /> Porsche</a></li>
+                <li><a href="#"><img src="Assets/koenigsegg logo.png" alt="Koenigsegg" /> Koenigsegg</a></li>
+                <li><a href="#" id="customise-link"><i class="fa-solid fa-screwdriver-wrench"></i> Customise Your Car</a></li>
+                <li><a href="#"><i class="fa-regular fa-user"></i> My Account</a></li>
+                <li class="menu-icon"><i class="fa-solid fa-bars"></i></li>
+              </ul>
+            </nav>
     </header>
 
     <section class="team-container">
         <div class="team-member">
-            <img src="rahman.jpg" alt="Developer 1">
+            <img src="Assets/rahman.jpg" alt="Developer 1">
             <div class="member-info">
                 <h3>Abdul Rahman</h3>
                 <p>Frontend Developer</p>
@@ -87,7 +92,7 @@
         </div>
 
         <div class="team-member">
-            <img src="sujeet.jpg" alt="Developer 2">
+            <img src="Assets/sujeet.jpg" alt="Developer 2">
             <div class="member-info">
                 <h3>Sujeet</h3>
                 <p>Frontend Developer/UI Designer</p>
@@ -95,7 +100,7 @@
         </div>
 
         <div class="team-member">
-            <img src="seby.JPG" alt="Developer 3">
+            <img src="Assets/seby.JPG" alt="Developer 3">
             <div class="member-info">
                 <h3>Sebastian </h3>
                 <p>Frontend Developer</p>
@@ -103,7 +108,7 @@
         </div>
 
         <div class="team-member">
-            <img src="swayam.jpg" alt="Developer 4">
+            <img src="Assets/swayam.jpg" alt="Developer 4">
             <div class="member-info">
                 <h3>Swayam </h3>
                 <p>Frontend Developer</p>
@@ -111,13 +116,50 @@
         </div>
 
         <div class="team-member">
-            <img src="shreyash.jpeg" alt="Developer 5">
+            <img src="Assets/shreyash.jpeg" alt="Developer 5">
             <div class="member-info">
                 <h3>Shreyash</h3>
                 <p>Frontend Developer</p>
             </div>
         </div>
     </section>
+    <footer class="site-footer">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>Contact</h3>
+            <ul>
+              <li><a href="#">Book a Car</a></li>
+              <li><a href="#">Request a Test Drive</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#">BMW Cars</a></li>
+              <li><a href="#">Mercedes Benz Cars</a></li>
+              <li><a href="#">Porsche Cars</a></li>
+              <li><a href="#">Koenigsegg Cars</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Experience Luxury Lane 95</h3>
+            <ul>
+              <li><a href="developer.html">Developers</a></li>
+              <li><a href="#">Customise Your Car</a></li>
+          </div>
+          <div class="footer-column">
+            <h3>My Account</h3>
+            <ul>
+              <li><a href="#">Personal Information</a></li>
+              <li><a href="#">Log Out</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; LUXURY LANE 95 2025</p>
+        </div>
+      </footer>
 </body>
 </html>
 

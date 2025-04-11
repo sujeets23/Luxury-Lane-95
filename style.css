@@ -84,7 +84,7 @@ h1 {
 }
 
 .nav-links li a:hover {
-  color: #ffffff;
+  color: #26f3f7da;
   transform: scale(1.05);
 }
 
@@ -231,7 +231,7 @@ h1 {
   position: absolute;
   top: 5px;
   left: 5px;
-  color: #00ff00;
+  color: #00ff00d4;
   padding: 5px 10px;
   border-radius: 5px;
   font-weight: bold;
