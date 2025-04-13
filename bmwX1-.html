@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
+    /* ======= General ======= */
     body {
       margin: 0;
       padding: 0;
@@ -21,6 +22,7 @@
       margin: 0;
     }
 
+    /* ======= Navbar ======= */
     .navbar {
       position: fixed;
       top: 40px;
@@ -109,18 +111,19 @@
       font-weight: bold;
     }
 
-    .mercedesbgimg {
+    /* ======= BMW i7 Section ======= */
+    .bmwi7bgimg {
       position: relative;
       width: 100%;
       height: 100vh;
-      background: url('Assets/taycan-bg.jpg') no-repeat center center/cover;
+      background: url('Assets/bmw i7 bg for bmw webpage.jpg') no-repeat center center/cover;
       display: flex;
       align-items: center;
       justify-content: center;
       overflow: hidden;
     }
 
-    .mercedesbgimg img {
+    .bmwi7bgimg img {
       width: 100%;
       height: auto;
       display: block;
@@ -169,7 +172,7 @@
     }
 
     .blurred-info-box {
-      margin-top: 30px;
+      margin-top: 10px;
       padding: 25px 30px;
       width: 650px;
       text-align: start;
@@ -224,6 +227,7 @@
       cursor: pointer;
     }
 
+    /* ======= Footer ======= */
     .site-footer {
       background-color: #000;
       color: #e3e3e3;
@@ -281,6 +285,7 @@
       margin: 50px auto;
       width: 90%;
     }
+
     .modal {
       display: flex;
       align-items: center;
@@ -392,6 +397,7 @@
 </head>
 <body>
 
+  <!-- ======= Header ======= -->
   <header>
     <nav class="navbar">
       <div class="logo">
@@ -408,71 +414,76 @@
     </nav>
   </header>
 
+  <!-- ======= Main Section ======= -->
   <main>
-    <div class="mercedesbgimg" style="background: url('Assets/4k-Porsche-Taycan-4K-Wallpaper.jpg') no-repeat center center/cover;">
-      <img src="Assets/4k-Porsche-Taycan-4K-Wallpaper.jpg" alt="Porsche Taycan BG" />
+    <div class="bmwi7bgimg">
+      <img src="Assets/zuka-zurabishvili-broDSu0IObY-unsplash.jpg" alt="BMW i7 BG" />
       <div class="overlay">
-        <h2>Porsche Taycan</h2>
-        <p>Electrifying performance with unmistakable Porsche DNA.</p>
-        <p>"The Taycan — where innovation meets adrenaline."</p>
+        <h2>BMW X1</h2>
+        <p>Experience the future of luxury driving.</p>
+        <p>With every detail, the BMW i7 redefines luxury. Experience unmatched comfort, futuristic design, and groundbreaking innovation in motion.</p>
         <a href="#" class="book-btn" id="openModal">Book Now</a>
 
         <div class="blurred-info-box">
           <div class="specs-container" style="display: flex; justify-content: space-between;">
             <div class="engine-specs">
-              <h3>Performance Specs</h3>
+              <h3>Engine Specs</h3>
               <ul>
-                <li>Power: Up to 761 hp (Taycan Turbo S)</li>
-                <li>Torque: 1050 Nm</li>
-                <li>0–100 km/h Acceleration: 2.8 seconds</li>
+                <li>Engine Type: 1.5-litre TwinPower Turbo petrol engine​</li>
+                <li>Acceleration (0–100 km/h): 9.2 seconds​</li>
+                <li>Top Speed: 208 km/h​
+                  BMW Cyprus
+                  +2
+                                                    </li>
               </ul>
             </div>
             <div class="range-price-container" style="display: flex; flex-direction: column; justify-content: space-between;">
               <div class="range-specs">
                 <h3>Range</h3>
                 <ul>
-                  <li>Electric Range: Up to 512 km (WLTP)</li>
+                  <li>Battery Capacity: 66.4 kWh lithium-ion</li>
+                  <li>AC Charging (11 kW Wallbox): 0–100% in ~6.3 hours</li>
                 </ul>
               </div>
               <div class="price-specs" style="margin-top: 10px;">
                 <h3>Price</h3>
                 <ul>
-                  <li>Ex-Showroom Price: ₹1,74,00,000</li>
+                  <li>Price in India: ₹66.9 lakh (ex-showroom) </li>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="features">
+          <div class="feautures">
             <h3>Features</h3>
             <ul>
-              <li>Porsche Electric Sport Sound</li>
-              <li>Adaptive Cruise Control</li>
-              <li>Over-the-Air Software Updates</li>
-              <li>All-Wheel Drive</li>
-              <li>Dual Touchscreen Infotainment</li>
+              <li>18-inch Alloy Wheels: Stylish wheels that complement the vehicle's dynamic stance.</li>
+              <li>Dual-Zone Climate Control: Allows personalized  </li>
+              <li>Comprehensive Airbag System: Includes 10 airbags to protect occupants in various collision scenarios.</li>
+              <li>Panoramic Sunroof: Offers an expansive view of the sky, enhancing the sense of space inside the cabin.</li>
             </ul>
           </div>
         </div>
       </div>
 
       <div class="side-thumbs-left">
-        <img src="Assets/taycan dashboard.jpg" alt="Taycan Interior" />
-        <img src="Assets/taycan seat.webp" alt="Taycan Side Shot" />
-        <img src="Assets/ab3c2195507379.5e98d0a088d4f.jpg" alt="Taycan Night Drive" />
+        <img src="Assets/x1 in.JPG" alt="BMW i7 Interior" />
+        <img src="Assets/x1 inn.JPG" alt="BMW i7 Driving" />
+        <img src="Assets/x1 innn.JPG" alt="BMW i7 Night View" />
       </div>
 
       <div class="side-thumbs-right">
-        <img src="Assets/taycan front.jpg" alt="Taycan Front View" />
-        <img src="Assets/taycan-left-front-three-quarter.webp" alt="Taycan Cockpit" />
-        <img src="Assets/porsche-taycan-china-2020-03-min-1400x700.png.webp" alt="Taycan Rear View" />
+        <img src="Assets/1x.jpg" alt="BMW i7 Interior" />
+        <img src="Assets/wp12081766-bmw-x1-2023-wallpapers.jpg" alt="BMW i7 New Arrivals" />
+        <img src="Assets/x1.jpg" alt="BMW i7 Night View" />
       </div>
     </div>
   </main>
- <!-- ======= Modal Popup ======= -->
+
+   <!-- ======= Modal Popup ======= -->
  <div id="bookingModal" class="modal">
   <div class="modal-content">
     <span class="close" id="closeModal">&times;</span>
-    <h2>Book Your Taycan</h2>
+    <h2>Book Your BMW X1</h2>
     <form id="bookingForm">
       <label for="name">Full Name</label>
       <input type="text" id="name" placeholder="Your full name" required />
@@ -490,8 +501,10 @@
     </form>
   </div>
 </div>
+
   <hr />
 
+  <!-- ======= Footer ======= -->
   <footer class="site-footer">
     <div class="footer-content">
       <div class="footer-column">
@@ -529,6 +542,7 @@
       <p>&copy; 2025 Luxury Lane 95. All Rights Reserved.</p>
     </div>
   </footer>
+
   <script src="script.js"></script>
 
 </body>
