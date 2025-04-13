@@ -127,7 +127,7 @@
   <div class="signup-container">
     <img src="assets/luxury lane 95 logo.png" alt="Luxury Lane 95 Logo" class="logo">
     <h2><i class="fa-solid fa-user-plus"></i> Create Your Account</h2>
-    <form action="#" method="POST">
+    <form id="signupForm">
       <label for="name">Full Name</label>
       <input type="text" id="name" name="name" placeholder="Your Name" required>
 
@@ -139,14 +139,22 @@
 
       <label for="password">Password</label>
       <input type="password" id="password" name="password" placeholder="Create a password" required>
-      <a href="index.html">
-        <button type="submit">Sign Up</button>
-      </a>
+
+      <button type="submit">Sign Up</button>
     </form>
     <div class="back-link">
-      Already have an account? <a href="#">Login</a>
+      Already have an account? <a href="index.html">Login</a>
     </div>
   </div>
+
+  <script>
+    document.getElementById("signupForm").addEventListener("submit", function (e) {
+      e.preventDefault(); // Prevent real form submission
+
+      // Redirect to main.html after sign-up
+      window.location.href = "main.html";
+    });
+  </script>
 
 </body>
 </html>

@@ -127,7 +127,7 @@
   <div class="login-container">
     <img src="assets/luxury lane 95 logo.png" alt="Luxury Lane 95 Logo" class="logo">
     <h2><i class="fa-solid fa-right-to-bracket"></i> Login to Your Account</h2>
-    <form action="#" method="POST">
+    <form id="loginForm">
       <label for="email">Email Address</label>
       <input type="email" id="email" name="email" placeholder="you@example.com" required>
 
@@ -136,14 +136,23 @@
 
       <label for="password">Password</label>
       <input type="password" id="password" name="password" placeholder="Enter your password" required>
-      <a href="main.html">
+
+      <div class="login-button">
         <button type="submit">Login</button>
-      </a>
+      </div>
     </form>
     <div class="bottom-link">
-      Don’t have an account? <a href="signup.html">Sign Up</a>
+      Don't have an account? <a href="signup.html">Sign Up</a>
     </div>
   </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function (e) {
+      e.preventDefault(); // Prevent form from submitting normally
+      // You can add basic validation or login check here if needed
+      window.location.href = "main.html"; // Redirect to main.html
+    });
+  </script>
 
 </body>
 </html>
