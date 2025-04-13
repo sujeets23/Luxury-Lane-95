@@ -151,8 +151,25 @@
     document.getElementById("signupForm").addEventListener("submit", function (e) {
       e.preventDefault(); // Prevent real form submission
 
-      // Redirect to main.html after sign-up
-      window.location.href = "main.html";
+      // Get user inputs
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      // Validate if all fields are filled
+      if (name && email && phone && password) {
+        // Store user data in localStorage
+        localStorage.setItem("userName", name);
+        localStorage.setItem("userEmail", email);
+        localStorage.setItem("userPhone", phone);
+        localStorage.setItem("userPassword", password);
+
+        // Redirect to the main page after successful sign-up
+        window.location.href = "main.html";
+      } else {
+        alert("Please fill in all fields.");
+      }
     });
   </script>
 

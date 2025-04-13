@@ -149,8 +149,29 @@
   <script>
     document.getElementById("loginForm").addEventListener("submit", function (e) {
       e.preventDefault(); // Prevent form from submitting normally
-      // You can add basic validation or login check here if needed
-      window.location.href = "main.html"; // Redirect to main.html
+
+      // Retrieve user details from localStorage (saved during sign up)
+      const storedEmail = localStorage.getItem("userEmail");
+      const storedPhone = localStorage.getItem("userPhone");
+      const storedPassword = localStorage.getItem("userPassword");
+
+      // Get login inputs
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      // Validate if entered login details match saved user data
+      if (email === storedEmail && phone === storedPhone && password === storedPassword) {
+        // Store logged in user details in localStorage
+        localStorage.setItem("loginName", localStorage.getItem("userName"));
+        localStorage.setItem("loginEmail", storedEmail);
+        localStorage.setItem("loginPhone", storedPhone);
+
+        // Redirect to the main page after successful login
+        window.location.href = "main.html"; 
+      } else {
+        alert("Invalid login credentials. Please try again.");
+      }
     });
   </script>
 
