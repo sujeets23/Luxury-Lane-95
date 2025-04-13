@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Book a Test Drive | Luxury Lane 95</title>
+  <link rel="icon" href="assets/luxury lane 95 logo.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #0f0f0f, #1c1c1c);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 20px;
+      min-height: 100vh;
+    }
+
+    .logo {
+      width: 120px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    .sub-text {
+      color: #bbbbbb;
+      font-size: 16px;
+      margin-bottom: 40px;
+      text-align: center;
+      max-width: 600px;
+    }
+
+    .form-container {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 520px;
+      width: 100%;
+      animation: fadeSlideUp 1s ease-in-out;
+    }
+
+    @keyframes fadeSlideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .input-group {
+      position: relative;
+    }
+
+    .input-group i {
+      position: absolute;
+      top: 50%;
+      left: 14px;
+      transform: translateY(-50%);
+      color: #999;
+      pointer-events: none;
+    }
+
+    .input-group input,
+    .input-group select,
+    .input-group textarea {
+      width: 100%;
+      padding: 14px 14px 14px 42px;
+      background: #191919;
+      border: 1px solid #333;
+      border-radius: 10px;
+      font-size: 14px;
+      color: #fff;
+      transition: border-color 0.3s;
+    }
+
+    .input-group input:focus,
+    .input-group select:focus,
+    .input-group textarea:focus {
+      border-color: #00ccff;
+      outline: none;
+    }
+
+    .input-group textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    button {
+      background: linear-gradient(135deg, #00ccff, #0077ff);
+      color: white;
+      padding: 14px;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(0, 204, 255, 0.5);
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 28px;
+      }
+
+      .form-container {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <img src="assets/luxury lane 95 logo.png" alt="Luxury Lane 95 Logo" class="logo">
+  <h1><i class="fa-solid fa-car-side"></i> Book a Test Drive</h1>
+  <p class="sub-text">Get ready to feel the thrill. Select your dream car and schedule a test drive with ease.</p>
+
+  <div class="form-container">
+    <form action="#" method="POST">
+
+      <div class="input-group">
+        <i class="fa-solid fa-user"></i>
+        <input type="text" name="name" placeholder="Full Name" required />
+      </div>
+
+      <div class="input-group">
+        <i class="fa-solid fa-envelope"></i>
+        <input type="email" name="email" placeholder="Email Address" required />
+      </div>
+
+      <div class="input-group">
+        <i class="fa-solid fa-phone"></i>
+        <input type="tel" name="phone" placeholder="Mobile Number" pattern="[0-9]{10,15}" required />
+      </div>
+
+      <div class="input-group">
+        <i class="fa-solid fa-car"></i>
+        <select name="car" required>
+          <option value="">Select Car Model</option>
+          <option value="BMW M5">BMW M5</option>
+          <option value="BMW i7">BMW i7</option>
+          <option value="Koenigsegg Regera">Koenigsegg Regera</option>
+          <option value="Porsche 911">Porsche 911</option>
+          <option value="Mercedes S-Class">Mercedes S-Class</option>
+          <option value="G Wagon">G Wagon</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <i class="fa-solid fa-calendar-days"></i>
+        <input type="date" name="date" required />
+      </div>
+
+      <div class="input-group">
+        <i class="fa-solid fa-clock"></i>
+        <input type="time" name="time" required />
+      </div>
+
+      <div class="input-group">
+        <i class="fa-solid fa-comment"></i>
+        <textarea name="message" placeholder="Any special requests? (Optional)"></textarea>
+      </div>
+
+      <button type="submit">Submit Request</button>
+    </form>
+  </div>
+
+</body>
+</html>

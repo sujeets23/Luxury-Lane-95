@@ -1,178 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BMW Car Models Showcase</title>
-  <link rel="stylesheet" href="external.css"> <!-- External CSS file if any -->
-  <!-- External Libraries for Font Awesome Icons and Google Fonts -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BMW - Luxury Lane 95</title>
+  <link rel="icon" type="icon" href="Assets/luxury lane 95 logo.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="bmwi7style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    .active-section {
+      font-weight: bold;
+      color: #d4af37; /* Luxury gold tone */
+      border-bottom: 3px solid #d4af37;
+      padding-bottom: 4px;
     }
 
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      text-align: center;
-    }
-
-    header {
-      background-color: #000;
-      color: white;
-      padding: 20px;
-      position: relative;
-    }
-
-    /* BMW Logo Styles */
-    .bmw-logo {
-      width: 80px;
-      height: auto;
-      animation: fadeIn 2s ease-out;
-      position: absolute;
-      top: 20px;
-      left: 20px;
-    }
-
-    /* Slideshow Container */
-    .slideshow-container {
-      position: relative;
-      max-width: 100%;
-      margin: 20px auto;
-      overflow: hidden;
-    }
-
-    .mySlides {
-      display: none;
-      opacity: 0;
-      transition: opacity 1s ease-in-out; /* Smooth fade-in and fade-out transition */
-    }
-
-    .slide-image {
-      width: 100%;
-      height: 777px; /* Adjust this height to make the slideshow shorter */
-      object-fit: cover; /* Ensures the image covers the space without distortion */
-    }
-
-    /* Photo Gallery */
-    .gallery-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin: 20px 0;
-    }
-
-    .gallery-item {
-      width: 250px;
-      height: 250px;
-      overflow: hidden;
-      border-radius: 8px;
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-
-    .gallery-item img:hover {
-      transform: scale(1.1);
-    }
-
-    /* Suggestion Text */
-    .suggestion {
-      margin-top: 20px;
-      font-size: 18px;
-      color: #333;
-    }
-
-    /* Fade-in animation for the logo */
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
+    .nav-links li a.active-section img {
+      filter: brightness(1.15);
     }
   </style>
 </head>
 <body>
+
   <header>
-    <img src="logo.png.png" alt="BMW Logo" class="bmw-logo"> <!-- Fixed logo filename -->
-    <h1>BMW</h1>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html"><img src="Assets/luxury lane 95 logo.png" alt="Luxury Lane 95 Logo" /></a>
+      </div>
+      <h1>Drive Dreams Live Luxury</h1>
+      <ul class="nav-links">
+        <li><a href="bmw.html" class="active-section"><img src="Assets/vecteezy_bmw-transparent-png-bmw-free-png_19956127.png" alt="BMW" /> BMW</a></li>
+        <li><a href="porsche.html"><img src="Assets/porsche logo.png" alt="Porsche" /> Porsche</a></li>
+        <li><a href="koenigsegg.html"><img src="Assets/koenigsegg logo.png" alt="Koenigsegg" /> Koenigsegg</a></li>
+        <li><a href="#" id="customise-link"><i class="fa-solid fa-screwdriver-wrench"></i> Customise Your Car</a></li>
+        <li><a href="#"><i class="fa-regular fa-user"></i> My Account</a></li>
+        <li class="menu-icon"><i class="fa-solid fa-bars"></i></li>
+      </ul>
+    </nav>
   </header>
 
-  <div class="slideshow-container">
-    <div class="mySlides fade">
-      <img src="BMW i7.jpg.jpg" alt="BMW Model 1" class="slide-image">  <!-- Fixed image filenames -->
+  <main>
+    <!-- BMW Slider -->
+    <div class="car-slider">
+      <div class="slide active">
+        <img src="Assets/bmw m5 slider.png" alt="BMW M5 Slider" />
+        <div class="slider-text">
+          <h2>BMW M5</h2>
+          <p>Power. Prestige. Perfection.</p>
+          <a href="bmwm5" class="book-btn">Explore</a>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="Assets/bmw i7 bg for bmw webpage.jpg" alt="BMW i7 Slider" />
+        <div class="slider-text">
+          <h2>BMW i7</h2>
+          <p>Luxury Redefined.</p>
+          <a href="bmwi7.html" class="book-btn">Explore</a>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="Assets/bmw x1 bmw.jpg" alt="BMW X1 Slider" />
+        <div class="slider-text">
+          <h2>BMW X1</h2>
+          <p>Compact Luxury. Ultimate Performance.</p>
+          <a href="bmw x1.html" class="book-btn">Explore</a>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="Assets/bmw m4.jpg" alt="BMW M4 Slider" />
+        <div class="slider-text">
+          <h2>BMW M4</h2>
+          <p>Track Ready. Street Smart.</p>
+          <a href="BMW m4.html" class="book-btn">Explore</a>
+        </div>
+      </div>
     </div>
-    <div class="mySlides fade">
-      <img src="BMW1 i7.jpg.jpg" alt="BMW Model 2" class="slide-image">
+
+    <!-- BMW Cars Section -->
+    <h2 class="new-arrivals-text">BMW Cars</h2>
+    <div class="new-arrivals-carousel">
+      <div class="new-arrivals">
+        <div class="car-model-container">
+          <a href="bmw x1.html"><img src="Assets/bmw x1 bmw.jpg" alt="BMW X1" /></a>
+          <div class="car-model-text">
+            <h3>BMW X1</h3>
+            <p>Compact Luxury</p>
+          </div>
+        </div>
+        <div class="car-model-container">
+          <a href="BMW m4.html"><img src="Assets/bmw m4.jpg" alt="BMW M4" /></a>
+          <div class="car-model-text">
+            <h3>BMW M4</h3>
+            <p>Sport. Elegance. Power.</p>
+          </div>
+        </div>
+        <div class="car-model-container">
+          <a href="bmwi7.html"><img src="Assets/bmw i7 bg for bmw webpage.jpg" alt="BMW i7" /></a>
+          <div class="car-model-text">
+            <h3>BMW i7</h3>
+            <p>Innovation Meets Luxury</p>
+          </div>
+        </div>
+        <div class="car-model-container">
+          <a href="bmwi5.html"><img src="Assets/bmw i5 new arrivals.jpg" alt="BMW i5" /></a>
+          <div class="car-model-text">
+            <h3>BMW i5</h3>
+            <p>Electric Excellence</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="mySlides fade">
-      <img src="wp11913426-bmw-i7.jpg.jpg" alt="BMW Model 3" class="slide-image">
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="#">Book a Car</a></li>
+          <li><a href="#">Request a Test Drive</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">BMW Cars</a></li>
+          <li><a href="#">Mercedes Benz Cars</a></li>
+          <li><a href="#">Porsche Cars</a></li>
+          <li><a href="#">Koenigsegg Cars</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Experience Luxury Lane 95</h3>
+        <ul>
+          <li><a href="developer.html">Developers</a></li>
+          <li><a href="#">Customise Your Car</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>My Account</h3>
+        <ul>
+          <li><a href="#">Personal Information</a></li>
+          <li><a href="#">Log Out</a></li>
+        </ul>
+      </div>
     </div>
-    <div class="mySlides fade">
-      <img src="m8.jpg" alt="BMW Model 4" class="slide-image">
+    <div class="footer-bottom">
+      <p>&copy; LUXURY LANE 95 2025</p>
     </div>
+  </footer>
+
+  <div id="coming-soon-popup" class="popup">
+    <p>Coming Soon</p>
   </div>
 
-  <!-- Photo Gallery Section -->
-  <div class="gallery-container">
-    <div class="gallery-item">
-      <img src="" alt="BMW X5">
-    </div>
-    <div class="gallery-item">
-      <img src="BMW M3.jpg" alt="BMW M3">
-    </div>
-    <div class="gallery-item">
-      <img src="BMW 3 Series.jpg" alt="BMW 3 Series">
-    </div>
-    <div class="gallery-item">
-      <img src="BMW Z4.jpg" alt="BMW Z4">
-    </div>
-    <div class="gallery-item">
-      <img src="BMW 7 Series.jpg" alt="BMW 7 Series">
-    </div>
-  </div>
-
-  <!-- Suggestion Section -->
-  <div class="suggestion">
-    <h3>Looking for a BMW? Explore some of our best models!</h3>
-    <p>Check out our exclusive collection including the BMW X5, M3, 3 Series, Z4, and 7 Series. Which one will you choose?</p>
-  </div>
-
-  <script>
-    let slideIndex = 0;
-
-    function showSlides() {
-      let slides = document.getElementsByClassName("mySlides");
-      // Hide all slides
-      for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-        slides[i].style.opacity = 0; // Reset opacity when hiding
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) {
-        slideIndex = 1;
-      }
-      slides[slideIndex - 1].style.display = "block"; // Show the current slide
-      setTimeout(() => {
-        slides[slideIndex - 1].style.opacity = 1; // Fade-in the current slide
-      }, 10); // Small delay to apply the opacity transition
-
-      setTimeout(showSlides, 3000); // Change slide every 3 seconds
-    }
-
-    window.onload = showSlides;
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
