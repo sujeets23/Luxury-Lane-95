@@ -26,3 +26,24 @@ document.getElementById('customise-link').addEventListener('click', function(eve
     popup.classList.remove('show');
   }, 2000);
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const overlay = document.getElementById('overlay');
+    const closeBtn = document.getElementById('close-btn');
+    const bookNowButton = document.querySelector('.book-now-button'); // Adjust the selector as needed
+
+    bookNowButton.addEventListener('click', function() {
+        overlay.style.display = 'flex';
+    });
+
+    closeBtn.addEventListener('click', function() {
+        overlay.style.display = 'none';
+    });
+
+    // Optional: Close overlay when clicking outside of the content
+    overlay.addEventListener('click', function(event) {
+        if (event.target === overlay) {
+            overlay.style.display = 'none';
+        }
+    });
+});

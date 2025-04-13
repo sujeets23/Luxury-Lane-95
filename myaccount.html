@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Account | Luxury Lane 95</title>
+  <link rel="icon" href="assets/luxury lane 95 logo.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    body {
+      background-color: #000;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      color: #fff;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #000;
+      border-bottom: 1px solid #222;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 999;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .navbar h1 {
+      font-size: 1.5rem;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 18px;
+      align-items: center;
+    }
+
+    .nav-links li a {
+      color: #eee;
+      text-decoration: none;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+      color: #6cf;
+    }
+
+    .nav-links img {
+      height: 20px;
+    }
+
+    main {
+      padding: 140px 20px 60px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.6em;
+      color: #f1f1f1;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #aaa;
+      margin-bottom: 40px;
+    }
+
+    .account-section {
+      background: linear-gradient(145deg, #0e0e0e, #1a1a1a);
+      padding: 25px 30px;
+      border-radius: 14px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.04);
+    }
+
+    .account-section h3 {
+      font-size: 1.4em;
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    .account-section p,
+    .account-section ul li {
+      font-size: 1rem;
+      color: #ccc;
+      line-height: 1.7;
+    }
+
+    .account-section ul {
+      padding-left: 20px;
+    }
+
+    .account-section ul li a {
+      color: #6cf;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .account-section ul li a:hover {
+      color: #fff;
+    }
+
+    .booked-cars {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .car-card {
+      background-color: #111;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.03);
+      transition: transform 0.3s ease;
+    }
+
+    .car-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .car-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+
+    .car-card .details {
+      padding: 15px;
+    }
+
+    .car-card .details h4 {
+      color: #fff;
+      margin: 0 0 5px;
+      font-size: 1.1rem;
+    }
+
+    .car-card .details p {
+      color: #999;
+      margin: 4px 0;
+      font-size: 0.95rem;
+    }
+
+    footer.site-footer {
+      background-color: #111;
+      padding: 40px 20px;
+      color: #aaa;
+      margin-top: 60px;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-column h3 {
+      color: #fff;
+      margin-bottom: 15px;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-column ul li a {
+      color: #aaa;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .footer-column ul li a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html"><img src="Assets/luxury lane 95 logo.png" alt="Luxury Lane 95 Logo" /></a>
+      </div>
+      <h1>Drive Dreams Live Luxury</h1>
+      <ul class="nav-links">
+        <li><a href="bmw.html"><img src="Assets/vecteezy_bmw-transparent-png-bmw-free-png_19956127.png" alt="BMW" /> BMW</a></li>
+        <li><a href="porsche.html"><img src="Assets/porsche logo.png" alt="Porsche" /> Porsche</a></li>
+        <li><a href="koenigsegg.html"><img src="Assets/koenigsegg logo.png" alt="Koenigsegg" /> Koenigsegg</a></li>
+        <li><a href="#"><i class="fa-solid fa-screwdriver-wrench"></i> Customise</a></li>
+        <li><a href="myaccount.html"><i class="fa-regular fa-user"></i> My Account</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <h2>My Account</h2>
+    <p class="subtitle">Your profile and booking overview</p>
+
+    <div class="account-section">
+      <h3>Account Information</h3>
+      <p><strong>Name:</strong> John Doe</p>
+      <p><strong>Email:</strong> johndoe@example.com</p>
+      <p><strong>Phone:</strong> +1 234 567 890</p>
+    </div>
+
+    <div class="account-section">
+      <h3>Quick Actions</h3>
+      <ul>
+        <li><a href="#">Edit Profile</a></li>
+        <li><a href="#">Change Password</a></li>
+        <li><a href="#">View Booking History</a></li>
+        <li><a href="#">Log Out</a></li>
+      </ul>
+    </div>
+
+    <div class="account-section">
+      <h3>Booked Cars</h3>
+      <div class="booked-cars">
+        <div class="car-card">
+          <img src="Assets/bmw_m4.jpg" alt="BMW M4 CSL">
+          <div class="details">
+            <h4>BMW M4 CSL</h4>
+            <p>Booking ID: #LL95123</p>
+            <p>Status: Confirmed</p>
+          </div>
+        </div>
+        <div class="car-card">
+          <img src="Assets/porsche_911.jpg" alt="Porsche 911 Turbo S">
+          <div class="details">
+            <h4>Porsche 911 Turbo S</h4>
+            <p>Booking ID: #LL95231</p>
+            <p>Status: Pending Delivery</p>
+          </div>
+        </div>
+        <div class="car-card">
+          <img src="Assets/koenigsegg.jpg" alt="Koenigsegg Jesko">
+          <div class="details">
+            <h4>Koenigsegg Jesko</h4>
+            <p>Booking ID: #LL95321</p>
+            <p>Status: Test Drive Scheduled</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="#">Book a Car</a></li>
+          <li><a href="#">Request Test Drive</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Explore</h3>
+        <ul>
+          <li><a href="#">BMW</a></li>
+          <li><a href="#">Mercedes</a></li>
+          <li><a href="#">Porsche</a></li>
+          <li><a href="#">Koenigsegg</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Luxury Lane 95</h3>
+        <ul>
+          <li><a href="#">Developers</a></li>
+          <li><a href="#">Customisation</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>My Account</h3>
+        <ul>
+          <li><a href="#">Profile Info</a></li>
+          <li><a href="#">Log Out</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; LUXURY LANE 95 2025. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

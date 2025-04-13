@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxury Lane 95</title>
+  <link rel="icon" type="image/png" href="assets/luxury lane 95 logo.png" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      background-size: cover;
+      color: #e3e3e3;
+    }
+
+    h1, h2, h3, p {
+      margin: 0;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1400px;
+      height: 75px;
+      padding: 0 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 39px;
+      border: 2px solid #848282;
+      background: linear-gradient(248deg, rgba(255, 0, 0, 0.17), rgba(2, 253, 236, 0.13));
+      box-shadow: inset -2px -2px 100px rgba(255, 255, 255, 0.10),
+                  inset 2px 2px 100px rgba(66, 66, 66, 0.10);
+      backdrop-filter: blur(50px);
+      z-index: 10;
+    }
+
+    .logo img {
+      width: 85px;
+      height: 50px;
+      object-fit: contain;
+      margin-top: 10px;
+    }
+
+    h1 {
+      font-size: 17px;
+      font-weight: 600;
+      opacity: 0.9;
+      margin-left: 40px;
+      margin-right: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 30px;
+      margin: 0;
+    }
+
+    .nav-links li a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+      color: #e3e3e3ec;
+      gap: 10px;
+      padding: 8px 12px;
+      transition: 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+      color: #26f3f7da;
+      transform: scale(1.05);
+    }
+
+    .nav-links img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+
+    .nav-links i {
+      font-size: 20px;
+    }
+
+    .menu-icon {
+      cursor: pointer;
+    }
+
+    .menu-icon i {
+      font-size: 24px;
+      transition: 0.3s ease;
+    }
+
+    .menu-icon:hover i {
+      color: #05f7ff;
+      transform: scale(1.05);
+    }
+
+    .nav-links li a.bmw-bold {
+      font-weight: bold;
+    }
+
+    .mercedesbgimg {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: url('Assets/panamera-bg.jpg') no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .mercedesbgimg img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 120px 20px 20px;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      z-index: 2;
+    }
+
+    .overlay h2 {
+      font-size: 50px;
+    }
+
+    .overlay p {
+      font-size: 20px;
+      margin-top: 10px;
+      max-width: 700px;
+    }
+
+    .book-btn {
+      background: #e3e3e3df;
+      color: #000;
+      padding: 10px 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+      transition: 0.3s ease;
+    }
+
+    .book-btn:hover {
+      background: #fff;
+    }
+
+    .blurred-info-box {
+      margin-top: 30px;
+      padding: 25px 30px;
+      width: 650px;
+      text-align: start;
+      border: 2px solid #848282;
+      border-radius: 25px;
+      background: linear-gradient(248deg, rgba(255, 0, 0, 0.17), rgba(2, 253, 236, 0.13));
+      backdrop-filter: blur(50px);
+      box-shadow: inset -2px -2px 100px rgba(255, 255, 255, 0.10),
+                  inset 2px 2px 100px rgba(66, 66, 66, 0.10);
+    }
+
+    .blurred-info-box h3 {
+      margin-top: 15px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .blurred-info-box ul {
+      margin: 0 0 0px 20px;
+      padding: 0;
+      font-size: 14px;
+      color: #dcdcdc;
+      list-style: disc;
+    }
+
+    .side-thumbs-left,
+    .side-thumbs-right {
+      position: absolute;
+      top: 20%;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      z-index: 2;
+    }
+
+    .side-thumbs-left {
+      left: 80px;
+    }
+
+    .side-thumbs-right {
+      right: 80px;
+    }
+
+    .side-thumbs-left img,
+    .side-thumbs-right img {
+      width: 250px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+    }
+
+    .site-footer {
+      background-color: #000;
+      color: #e3e3e3;
+      padding: 40px 0;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .footer-column {
+      flex: 1;
+      margin: 0 20px;
+    }
+
+    .footer-column h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: #e3e3e3ec;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-column ul li a {
+      color: #e3e3e3ac;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-column ul li a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #141414e7;
+      color: #676767;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      margin: 50px auto;
+      width: 90%;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html"><img src="Assets/luxury lane 95 logo.png" alt="Luxury Lane 95 Logo" /></a>
+      </div>
+      <h1>Drive Dreams Live Luxury</h1>
+      <ul class="nav-links">
+        <li><a href="mercedes.html"><img src="Assets/mercedes-logo.png" alt="Mercedes" /> Mercedes</a></li>
+        <li><a href="panamera.html" class="bmw-bold"><img src="Assets/porsche logo.png" alt="Porsche" /> Porsche</a></li>
+        <li><a href="#"><img src="Assets/koenigsegg logo.png" alt="Koenigsegg" /> Koenigsegg</a></li>
+        <li><a href="#"><i class="fa-solid fa-screwdriver-wrench"></i> Customise Your Car</a></li>
+        <li><a href="#"><i class="fa-regular fa-user"></i> My Account</a></li>
+        <li class="menu-icon"><i class="fa-solid fa-bars"></i></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="mercedesbgimg" style="background: url('Assets/panamera-bg.jpg') no-repeat center center/cover;">
+      <img src="Assets/bg1.jpg" alt="Porsche Panamera BG" />
+      <div class="overlay">
+        <h2>Porsche Panamera</h2>
+        <p>Unleash the spirit of sport-luxury with electrifying elegance.</p>
+        <p>"The Porsche Panamera — performance that defines luxury."</p>
+        <a href="#" class="book-btn">Book Now</a>
+
+        <div class="blurred-info-box">
+          <div class="specs-container" style="display: flex; justify-content: space-between;">
+            <div class="engine-specs">
+              <h3>Engine Specs</h3>
+              <ul>
+                <li>Power: 552 hp (Panamera 4S E-Hybrid)</li>
+                <li>Torque: 750 Nm</li>
+                <li>0–100 km/h Acceleration: 3.7 seconds</li>
+              </ul>
+            </div>
+            <div class="range-price-container" style="display: flex; flex-direction: column; justify-content: space-between;">
+              <div class="range-specs">
+                <h3>Range</h3>
+                <ul>
+                  <li>Electric Range: Up to 91 km (WLTP)</li>
+                </ul>
+              </div>
+              <div class="price-specs" style="margin-top: 10px;">
+                <h3>Price</h3>
+                <ul>
+                  <li>Ex-Showroom Price: ₹1,70,00,000</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="features">
+            <h3>Features</h3>
+            <ul>
+              <li>Sport Chrono Package</li>
+              <li>Advanced Infotainment System</li>
+              <li>Four-Zone Climate Control</li>
+              <li>Adaptive Air Suspension</li>
+              <li>Premium Leather Interior</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="side-thumbs-left">
+        <img src="Assets/p l 1.jpg" alt="Porsche Panamera Interior" />
+        <img src="Assets/pa l 2.jpg" alt="Panamera Driving Shot" />
+        <img src="Assets/123  .jpg" alt="Panamera Night View" />
+      </div>
+
+      <div class="side-thumbs-right">
+        <img src="Assets/p r 1.jpg" alt="Panamera Front View" />
+        <img src="Assets/p r 2.jpg" alt="Panamera Dashboard" />
+        <img src="Assets/p r 3.jpg" alt="Panamera Rear View" />
+      </div>
+    </div>
+  </main>
+
+  <hr />
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="#">Book a Car</a></li>
+          <li><a href="#">Request a Test Drive</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">BMW Cars</a></li>
+          <li><a href="#">Mercedes Benz Cars</a></li>
+          <li><a href="#">Porsche Cars</a></li>
+          <li><a href="#">Koenigsegg Cars</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Experience Luxury Lane 95</h3>
+        <ul>
+          <li><a href="developer.html">Developers</a></li>
+          <li><a href="#">Customise Your Car</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>My Account</h3>
+        <ul>
+          <li><a href="#">Personal Information</a></li>
+          <li><a href="#">Log Out</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; LUXURY LANE 95 2025</p>
+    </div>
+  </footer>
+
+</body>
+</html>
